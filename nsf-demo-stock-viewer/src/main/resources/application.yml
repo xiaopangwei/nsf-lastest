@@ -1,0 +1,11 @@
+grpc:
+  client:
+    nsf-demo-stock-provider-grpc:
+      enableKeepAlive: false
+      keepAliveWithoutCalls: false
+      negotiationType: plaintext
+      defaultLoadBalancingPolicy: round_robin
+    nsf-demo-stock-entry-grpc:
+      enableKeepAlive: false
+      keepAliveWithoutCalls: false
+      negotiationType: plaintext

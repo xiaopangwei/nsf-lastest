@@ -1,0 +1,40 @@
+nsf:
+  type: http
+  version: '2.0'
+  nsfServer: 'http://nsf-server-cust56.netease.com'
+  application:
+    name: stock-viewer-local
+    version: 2.2.2
+    projectCode: projectzjf
+    envCode: prod
+    zone: HZ-A
+    group: default
+    tags: []
+
+    # 方法配置
+  manager:
+    patterns:
+      - className: com.netease.cloud.nsf.demo.stock.viewer.web.service.impl.*
+
+  config:
+    enable: true
+    appId: stock-viewer-local
+    env: dev
+    #    server: http://10.182.2.108:10780/
+    namespaces:
+      - name: application
+      - name: smoke
+        Public: true
+
+  authority:
+    accessKey: 28cdbecd82f14519916b63ed92683821
+    secretKey: 856a9c89835d43ba87b0e92b9d9df0b1
+
+  log:
+    mode: user  #日志输出模式,默认user. all -都输出  nsf -agent自己处理自己的日志  user -统一输出到用户日志下
+    path: /Users/magi/Git/nsf-demo-stock/logs  # 日志存放目录
+    level: error # 日志等级 默认info
+    timePattern: yyyy-MM-dd # 影响日志文件的命名。默认为 yyyy-MM-dd 即每天一个，yyyy-MM-dd_HH 为每小时
+    #maxFileSize: 1GB # 日志文件大小  默认1GB
+    #maxHistory: 15 #最大的存放时间，默认 30. 单位与timePattern设置有关，timePattern为每天，则存放历史已天为单位
+    #totalSizeCap: 2GB #所有日志文件最大占用空间 默认10GB
