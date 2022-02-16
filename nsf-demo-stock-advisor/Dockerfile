@@ -19,4 +19,4 @@ ADD ./*/target/classes/napm-agent.properties /opt/apm/
 
 ADD ./*/target/nsf*.jar /app.jar
 
-ENTRYPOINT ["java","-Xms512m","-Xmx1024m","-Dserver.port=8080","-Dstock_viewer_url=http://stock-viewer-zjf", "-Dstock_provider_url=http://stock-provider-zjf", "-Dstock_advisor_url=http://stock-advisor-zjf", "-Dnsf.prometheus.enable=true","-javaagent:/opt/nsf/nsf-agent.jar=nsf-cust92","-javaagent:/opt/apm/napm-java-agent/napm-java-rewriter.jar=conf=napm-agent.properties","-jar","/app.jar"]
+ENTRYPOINT ["java","-Xms512m","-Xmx1024m","-Dserver.port=8080","-Dstock_viewer_url=http://hw-stock-viewer", "-Dstock_provider_url=http://hw-stock-provider", "-Dstock_advisor_url=http://hw-stock-advisor", "-Dnsf.prometheus.enable=true","-javaagent:/opt/nsf/nsf-agent.jar=nsf-cust92","-javaagent:/opt/apm/napm-java-agent/napm-java-rewriter.jar=conf=napm-agent.properties","-jar","/app.jar"]
