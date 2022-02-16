@@ -1,13 +1,13 @@
 nsf:
   type: http
   version: '2.0'
-  nsfServer: 'http://nsf-server-cust92.netease.com'
+  nsfServer: 'http://nsf-server-cust92-env2.netease.com'
   application:
-    name: stock-viewer-zjf
-    version: 2.2.2
-    projectCode: pp1
-    envCode: prod
-    zone: HZ-B
+    name: hw-stock-viewer
+    version: 0.0.1
+    projectCode: htqh-default
+    envCode: prod2
+    zone: default
     group: default
     tags: []
 
@@ -18,7 +18,7 @@ nsf:
 
   config:
     enable: true
-    appId: stock-viewer-zjf
+    appId: hw-stock-viewer
     env: dev
     #    server: http://10.182.2.108:10780/
     namespaces:
@@ -27,8 +27,8 @@ nsf:
         Public: true
 
   authority:
-    accessKey: 6827cc62eeec458c94593c3392d73f5f
-    secretKey: ebe4b1397e3a43c5ae01bec6b3e2bc9b
+    accessKey: 514988f5848845908e254fe56e26e7f1
+    secretKey: e8dd2059337a48ad9d81cc2723c17c7f
 
   log:
     mode: user  #日志输出模式,默认user. all -都输出  nsf -agent自己处理自己的日志  user -统一输出到用户日志下
