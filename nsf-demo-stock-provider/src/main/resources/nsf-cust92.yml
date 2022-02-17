@@ -32,9 +32,9 @@ nsf:
 
   log:
     mode: user  #日志输出模式,默认user. all -都输出  nsf -agent自己处理自己的日志  user -统一输出到用户日志下
-    #path: /Users/magi/Git/nsf-demo-stock/logs  # 日志存放目录
-    level: error # 日志等级 默认info
-    #timePattern: yyyy-MM-dd # 影响日志文件的命名。默认为 yyyy-MM-dd 即每天一个，yyyy-MM-dd_HH 为每小时
-    #maxFileSize: 1GB # 日志文件大小  默认1GB
-    #maxHistory: 15 #最大的存放时间，默认 30. 单位与timePattern设置有关，timePattern为每天，则存放历史已天为单位
-    #totalSizeCap: 2GB #所有日志文件最大占用空间 默认10GB
+    path: /opt/nsf/logs  # 日志存放目录
+    level: info # 日志等级 默认info
+    timePattern: yyyy-MM-dd # 影响日志文件的命名。默认为 yyyy-MM-dd 即每天一个，yyyy-MM-dd_HH 为每小时
+    maxFileSize: 1GB # 日志文件大小  默认1GB
+    maxHistory: 15 #最大的存放时间，默认 30. 单位与timePattern设置有关，timePattern为每天，则存放历史已天为单位
+    totalSizeCap: 2GB #所有日志文件最大占用空间 默认10GB
